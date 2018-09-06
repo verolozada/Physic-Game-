@@ -5,7 +5,8 @@ var guessesSoFar = [];
 var guessesLeft = 9;
 
 //"physic" choices
-var computerChoices = ("abcdefghijklmnopqrstuvwxyz").split("");
+var computerChoices = ("acbdefghijklmnopqrstuvwxyz").split("");
+console.log(computerChoices);
 var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
 //variables to hold references
@@ -27,7 +28,6 @@ document.onkeyup = function (event) {
         //after the first win the game will start over again
         guessesLeft = 9;
         computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-        j = 0;
         guessesSoFar = [];
     } else {
         guessesLeft--;
@@ -37,7 +37,6 @@ document.onkeyup = function (event) {
         losses++;
         guessesLeft = 9;
         computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-        j = 0;
         guessesSoFar = [];
     }
 
